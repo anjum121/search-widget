@@ -6,7 +6,7 @@
     </form>
   </div>
 
-  <div class="list-items">
+  <div class="list-items" *ngIf="results">
     <ul>
       <li *ngFor="let user of results">
         <h1>{{user.name}}</h1>
