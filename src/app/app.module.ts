@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { UserSearchComponent } from './user-search/user-search.component';
+import {AppComponent} from './app.component';
+import {UserServiceService} from './services/user-service.service';
+import {UserSearchComponent} from './user-search/user-search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserSearchComponent } from './user-search/user-search.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserServiceService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
