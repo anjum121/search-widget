@@ -1,0 +1,11 @@
+//Ionicons ref.
+$ionicons-font-path: "~ionicons/dist/fonts/";
+@import '~ionicons/dist/scss/ionicons.scss';
+
+//font path
+$font-path: "../assets/fonts";
+
+//base theme
+$theme-primary-color: #443f5d;
+$font-family-base: "Roboto", sans-serif !default;
+$font-size-base: 1.6rem !default; // 1.4rem == 14px

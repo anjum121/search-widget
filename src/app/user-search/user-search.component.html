@@ -6,11 +6,12 @@
     </form>
   </div>
 
-  <div class="list-items" >
+  <div class="list-items">
     <ul>
       <li *ngFor="let user of results">
         <h1>{{user.name}}</h1>
-        <i class="icon ion-md-call"></i> {{user.phoneNumber}}   <i class="icon ion-ios-at-outline"></i> {{user.email}}   <i class="icon ion-ios-list"></i> {{user.policyNumber}}
+        <i class="icon ion-md-call"></i> {{user.phoneNumber}} <i class="icon ion-ios-at-outline"></i> {{user.email}} <i
+        class="icon ion-ios-list"></i> {{user.policyNumber}}
       </li>
     </ul>
   </div>
