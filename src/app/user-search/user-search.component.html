@@ -2,16 +2,21 @@
 
   <div class="dxb-search-holder">
     <form [formGroup]="userSearchForm">
-      <i class="icon ion-ios-search-outline"></i> <input formControlName="search" placeholder="config">
+      <i class="icon ion-ios-search-outline"></i> <input formControlName="search"
+                                                         placeholder="{{config.placeholderText}}">
     </form>
   </div>
 
-  <div class="list-items" *ngIf="results">
+  <div class="list-items" *ngIf="results.length > 0 ">
     <ul>
       <li *ngFor="let user of results">
         <h1>{{user.name}}</h1>
-        <i class="icon ion-md-call"></i> {{user.phoneNumber}} <i class="icon ion-ios-at-outline"></i> {{user.email}} <i
-        class="icon ion-ios-list"></i> {{user.policyNumber}}
+
+        <ul>
+          <li><i class="icon ion-md-call"></i> {{user.phoneNumber}}</li>
+          <li><i class="icon ion-ios-at-outline"></i> {{user.email}}</li>
+          <li><i class="icon ion-ios-list"></i> Policy No. {{user.policyNumber}} | {{user.policyNumber}}</li>
+        </ul>
       </li>
     </ul>
   </div>
